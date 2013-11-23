@@ -1,9 +1,13 @@
-DueFlashStorage
-===============
+# DueFlashStorage
 DueFlashStorage saves non-volatile data for Arduino Due. The library is made to be similar to EEPROM library. Uses flash block 1 per default.
 
-Note: uploading new software will erase all flash so data written to flash
-using this library will not survive a new software upload. 
+### Features
+- Non-volatile data storage. Resetting or loss of power to the Arduino will not affect the data.
+- Similar to the standard EEPROM library
+- Write and read byte by byte
+- Write and read byte arrays to store arbitrary variable types (strings, structs, integers, floats)
+
+Note: The flash storage is reset every time you upload a new sketch to your Arduino.
 
 Inspiration and some code from Pansenti at https://github.com/Pansenti/DueFlash
 
@@ -18,6 +22,29 @@ byte b = dueFlashStorage.read(0);
 ```
 
 ### Advanced use to store configuration parameters
+```cpp
+// say you want to store a struct with parameters like:
+struct Configuration {
+  uint8_t a;
+  uint8_t b;
+  int32_t bigInteger;
+  char* message;
+  char c;
+};
+Configuration configuration;
+
+// then write it to flash like this:
+byte b2[sizeof(Configuration)]; // create byte array to store the struct
+memcpy(b2, &configuration, sizeof(Configuration)); // copy the struct to the byte array
+dueFlashStorage.write(4, b2, sizeof(Configuration)); // write byte array to flash at address 4
+
+// and read from flash like this:
+byte* b = dueFlashStorage.readAddress(4); // byte array which is read from flash at adress 4
+Configuration configurationFromFlash; // create a temporary struct
+memcpy(&configurationFromFlash, b, sizeof(Configuration)); // copy byte array to temporary struct
+
+/* see example code for a working example */
+```
 
 ## Examples
 ### DueFlashStorageExample.cpp
