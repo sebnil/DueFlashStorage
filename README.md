@@ -1,5 +1,5 @@
 # DueFlashStorage
-DueFlashStorage saves non-volatile data for Arduino Due. The library is made to be similar to EEPROM library. Uses flash block 1 per default.
+DueFlashStorage saves non-volatile data for Arduino Due. The library is made to be similar to the EEPROM library. Uses flash block 1 per default.
 
 ### Features
 - Non-volatile data storage. Resetting or loss of power to the Arduino will not affect the data.
