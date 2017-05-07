@@ -47,6 +47,8 @@ public:
 	byte* readAddress(uint32_t address);
 	boolean write(uint32_t address, byte value);
 	boolean write(uint32_t address, byte *data, uint32_t dataLength);
+	boolean write_unlocked(uint32_t address, byte value);
+	boolean write_unlocked(uint32_t address, byte *data, uint32_t dataLength);
 };
 
 #endif
