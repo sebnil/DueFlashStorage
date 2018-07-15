@@ -6,7 +6,7 @@
 # Class (KEYWORD1)
 #######################################
 
-DueFlashStorage	KEYWORD1	DueFlashStorage
+DueFlashStorage	KEYWORD1
 
 #######################################
 # Methods and Functions (KEYWORD2)
