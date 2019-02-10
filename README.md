@@ -11,10 +11,6 @@ Note: The flash storage is reset every time you upload a new sketch to your Ardu
 
 Inspiration and some code from Pansenti at https://github.com/Pansenti/DueFlash
 
-## Install
-Create a new folder in your Arduino sketch folder named DueFlashStorage. 
-Download and put all files from this repository into the folder. 
-
 ## Use
 ### Basic use
 ```cpp
@@ -58,3 +54,9 @@ Try resetting the Arduino Due or unplug the power to it. The values will stay st
 ### DueFlashStorageStructExample.cpp
 This example will write a struct to memory which is a very convinient way of storing configuration parameters.
 Try resetting the Arduino Due or unplug the power to it. The values will stay stored.
+
+
+## Support my creation of open source software:
+[![Flattr this git repo](http://api.flattr.com/button/flattr-badge-large.png)](https://flattr.com/submit/auto?user_id=sebnil&url=https://github.com/sebnil/DueFlashStorage)
+
+<a href='https://ko-fi.com/A0A2HYRH' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://az743702.vo.msecnd.net/cdn/kofi2.png?v=0' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
