@@ -11,6 +11,15 @@ Note: The flash storage is reset every time you upload a new sketch to your Ardu
 
 Inspiration and some code from Pansenti at https://github.com/Pansenti/DueFlash
 
+## Install
+Arduino.cc has some good instructions on how to add libraries:
+https://www.arduino.cc/en/Guide/Libraries
+
+The easiest is just to open the library manager and search for "DueFlashStorage". Install the one from Sebastian Nilsson.
+
+Remember that you also need to install the Arduino SAM Boards from the board manager:
+https://www.arduino.cc/en/Guide/Cores
+
 ## Use
 ### Basic use
 ```cpp
